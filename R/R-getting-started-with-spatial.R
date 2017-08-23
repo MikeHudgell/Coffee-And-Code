@@ -1,3 +1,11 @@
+# Mike Hudgell 2017 
+#
+# Coffee and Code - Code Sample
+#
+# Read an ESRI shape file
+# 
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+#
 library(raster)
 # download shapefile from https://www.ngdc.noaa.gov/mgg/shorelines/data/gshhg/latest/
 #Load shapefile
