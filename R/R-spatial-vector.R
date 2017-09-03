@@ -53,8 +53,20 @@ row.names(newrow) = as.integer(boat_id)
 spdf_Track = SpatialLinesDataFrame(SL, newrow)
 line_shape_file <- paste0(path, 'shapefiles/', 'line_shape_file.shp')
 writeOGR(spdf_Track, line_shape_file, "Line Shape File", driver="ESRI Shapefile")
+plot(spdf_Track, main = "Test AIS", xlab = "Long", ylab = "Lat", cex=.1)
 #
 #
+#
+min(lats)
+max(lats)
+min(longs)
+max(longs)
+summary(lats)
+#
+plot(lats)
+print(one_boat[ which(one_boat$V3 > 90),])
+indx = one_boat[ which(one_boat$V3 > 90),]
+
 #
 test_line_shp <- shapefile(line_shape_file)
 plot(line_shape_file, main="Test AIS", xlab="Long", ylab="Lat", cex=.1)
