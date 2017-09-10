@@ -26,7 +26,7 @@ print(nrow(df))
 #
 # Write shape file point geometry
 #
-coords  <-  cbind(df$lat, df$long)
+coords  <-  cbind(df$lat, df$long, )
 spdf_AISPoint  <-  SpatialPointsDataFrame(coords, df)
 spdf_AISPoint@proj4string <- CRS("+proj=longlat +datum=WGS84")
 plot(spdf_AISPoint, main = "Test AIS", xlab = "Long", ylab = "Lat", cex=.1)
